@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "860699515746",
+    "firebase_url": "https://chtopochitat-3fff4.firebaseio.com",
+    "project_id": "chtopochitat-3fff4",
+    "storage_bucket": "chtopochitat-3fff4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860699515746:android:e0f695e65e6810d291ea3b",
+        "android_client_info": {
+          "package_name": "zakaz.zakaz.chto_pochitat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860699515746-vrkuj0m075vqj6rlkaq110rhv9nq0kjj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "zakaz.zakaz.chto_pochitat",
+            "certificate_hash": "8b5751b5b2d318550bd477df412f6a10fe828fe5"
+          }
+        },
+        {
+          "client_id": "860699515746-buhq50kiknbkq9f48a6k39itrbpnsbc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtF8cuo-jNRbBdSgxyi3tnxBmrp_ZoKRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860699515746-buhq50kiknbkq9f48a6k39itrbpnsbc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
