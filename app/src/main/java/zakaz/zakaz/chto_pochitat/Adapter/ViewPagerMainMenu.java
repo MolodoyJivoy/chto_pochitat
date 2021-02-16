@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hmomeni.progresscircula.ProgressCircula;
@@ -32,7 +33,7 @@ import zakaz.zakaz.chto_pochitat.View.ViewPagerMain;
 /**
  * ViewPager главного меню
  * */
-public class ViewPagerMainMenu  extends RecyclerView.Adapter<ViewPagerMainMenu.ViewHolder> {
+public class ViewPagerMainMenu extends RecyclerView.Adapter<ViewPagerMainMenu.ViewHolder> {
 
     private Context context;
     ViewHolder holder;
@@ -81,8 +82,10 @@ public class ViewPagerMainMenu  extends RecyclerView.Adapter<ViewPagerMainMenu.V
         holder.Description.setText(book.get(pos).getDescription());
         holder.scaleRatingBar.setRating(book.get(pos).getRating());
         holder.RatingNumber.setText("Рейтинг: " + book.get(pos).getRating());
-        holder.recyclerAdapterCircleItems = new RecyclerAdapterCircleItems(context, book, pos);
-        holder.CircleItems.setAdapter(holder.recyclerAdapterCircleItems);
+        RecyclerAdapterCircleItems recyclerAdapterCircleItems = new RecyclerAdapterCircleItems(context, book, pos);
+        holder.CircleItems.setAdapter(recyclerAdapterCircleItems);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
+        holder.CircleItems.setLayoutManager(linearLayoutManager);
         List<String> keys = Paper.book("books").getAllKeys();
         for (String key : keys){
             if (key.equals(book.get(pos).getBook())){
