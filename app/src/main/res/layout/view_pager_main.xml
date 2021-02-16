@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hmomeni.progresscircula.ProgressCircula
+        android:id="@+id/progressBar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pgc_indeterminate="true"
+        app:pgc_progress="40"
+        app:pgc_rimColor="@color/intro_description_color"
+        app:pgc_rimWidth="3dp"
+        app:pgc_showProgress="true"
+        app:pgc_speed="1"
+        app:pgc_textColor="#00FF00" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pagerMainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
