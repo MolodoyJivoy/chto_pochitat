@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".AddNewFavorites"
-            android:theme="@style/AppThemeMaterial"></activity>
-        <activity
             android:name=".OnBoarding.IntroAction"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity

@@ -51,7 +51,7 @@ public class ViewPagerMainMenu extends RecyclerView.Adapter<ViewPagerMainMenu.Vi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.main_menu_black_theme, parent, false);
+        View view = layoutInflater.inflate(R.layout.main_menu_black_theme_ver3, parent, false);
         return new ViewPagerMainMenu.ViewHolder(view);
     }
 
@@ -59,21 +59,6 @@ public class ViewPagerMainMenu extends RecyclerView.Adapter<ViewPagerMainMenu.Vi
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         this.holder = holder;
         Paper.init(context);
-
-//        holder.scrollView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-//            @Override
-//            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-//                if (!holder.scrollView.canScrollVertically(1)) {
-//                    Toast.makeText(context, "Низ", Toast.LENGTH_SHORT).show();
-//                    viewPagerMain.startSwipe();
-//                }
-//                if (!holder.scrollView.canScrollVertically(-1)) {
-//                    Toast.makeText(context, "Вверх", Toast.LENGTH_SHORT).show();
-//                    viewPagerMain.stopSwipe();
-//                }
-//            }
-//        });
-
         int size = book.size() - 1;
         final int pos = (int) (Math.random() * ++size);
         holder.Name.setText(book.get(pos).getBook());

@@ -7,7 +7,7 @@ public class Book implements IBook {
     private List<String> genre;
     private float rating;
 
-    private Boolean scrollUp, scrollDown;
+    private Boolean scrolling = false;
 
 
     Book(){
@@ -23,20 +23,12 @@ public class Book implements IBook {
         this.description = description;
     }
 
-    public Boolean getScrollUp() {
-        return scrollUp;
+    public Boolean getScrolling() {
+        return scrolling;
     }
 
-    public void setScrollUp(Boolean scrollUp) {
-        this.scrollUp = scrollUp;
-    }
-
-    public Boolean getScrollDown() {
-        return scrollDown;
-    }
-
-    public void setScrollDown(Boolean scrollDown) {
-        this.scrollDown = scrollDown;
+    public void setScrolling(Boolean scrolling) {
+        this.scrolling = scrolling;
     }
 
     @Override

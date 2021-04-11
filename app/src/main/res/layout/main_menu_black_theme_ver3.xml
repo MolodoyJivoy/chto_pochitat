@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="28dp"
+        app:cardBackgroundColor="#212121"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingTop="24sp"
+                android:paddingRight="24dp"
+                android:paddingBottom="24sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Что почитать?"
+                        android:textColor="#fafafa"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="32dp"
+                    app:srcCompat="@drawable/ic_book_white" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginRight="2dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round_10px"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="24dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="24dp">
+
+                            <TextView
+                                android:id="@+id/NameBook"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:gravity="center"
+                                android:text="Как продать что угодно и кому угодно"
+                                android:textColor="#131313"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/NameAuthor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:text="Джо Джтрард"
+                                android:textColor="#272727"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="24dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="4dp">
+
+                                <com.willy.ratingbar.ScaleRatingBar
+                                    android:id="@+id/simpleRatingBar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srb_clearRatingEnabled="true"
+                                    app:srb_clickable="false"
+                                    app:srb_isIndicator="false"
+                                    app:srb_minimumStars="0"
+                                    app:srb_numStars="5"
+                                    app:srb_rating="4.56"
+                                    app:srb_scrollable="false"
+                                    app:srb_starHeight="22dp"
+                                    app:srb_starPadding="4dp"
+                                    app:srb_starWidth="22dp"
+                                    app:srb_stepSize="0.5" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/RatingNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Рейтинг: 4.24"
+                            android:textColor="#e0e0e0"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ItemsCircle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="2dp"
+                    app:cardCornerRadius="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:text="Описание книги"
+                            android:textColor="#222222"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/Description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity=""
+                            android:text="Один из самых известных романов мировой литературы, публикация которого в 1891 году стала причиной скандала в английском обществе. Критика осудила его как аморальное произведение, однако обычными читателями роман был принят восторженно. В нем поставлены вечные вопросы человечества — о смысле жизни, об ответственности за содеянное, о величии красоты, о смысле любви и губящей власти греха. Это бессмертное произведение Оскара Уайльда экранизировалось более 25 раз."
+                            android:textColor="#222222"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="36dp"
+                        android:background="#e0e0e0" />
+
+                    <TextView
+                        android:id="@+id/Excerption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:text="Самое важное — как вы работаете, а не где вы работаете"
+                        android:textColor="#9e9e9e"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="#e0e0e0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.like.LikeButton
+                                android:id="@+id/like_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:anim_scale_factor="2.5"
+                                app:icon_size="20dp"
+                                app:icon_type="heart"
+                                app:like_drawable="@drawable/ic_passion"
+                                app:unlike_drawable="@drawable/ic_passion_unlike" />
+
+                            <!--                        <com.sackcentury.shinebuttonlib.ShineButton-->
+                            <!--                            android:id="@+id/po_image2"-->
+                            <!--                            android:layout_width="22dp"-->
+                            <!--                            android:layout_height="22dp"-->
+                            <!--                            android:layout_alignParentBottom="true"-->
+                            <!--                            android:layout_centerInParent="true"-->
+                            <!--                            android:layout_gravity="center"-->
+                            <!--                            android:src="#320642"-->
+                            <!--                            app:allow_random_color="false"-->
+                            <!--                            app:btn_color="#333030"-->
+                            <!--                            app:btn_fill_color="#D31212"-->
+                            <!--                            app:enable_flashing="true"-->
+                            <!--                            app:layout_constraintBottom_toTopOf="@+id/imageView"-->
+                            <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                            app:layout_constraintTop_toTopOf="parent"-->
+                            <!--                            app:shine_count="15"-->
+                            <!--                            app:shine_turn_angle="20"-->
+                            <!--                            app:siShape="@drawable/ic_passion" />-->
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

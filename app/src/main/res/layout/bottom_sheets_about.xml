@@ -9,8 +9,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:background="@drawable/bottom_sheets_backrgorund"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,57 +30,62 @@
                 android:id="@+id/textView15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Чтобы Вы хотели видеть нового в приложении?"
+                android:text="Выберите Ваши любимые жанры"
                 android:textColor="#fafafa"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/outlinedTextField"
-                android:theme="@style/TextInputLayoutAppearance"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                app:boxStrokeColor="#fff"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:textColorHint="#fff"
-                app:startIconDrawable="@drawable/ic_passion"
-                app:startIconTint="#CC1616"
-                app:hintTextColor="#fff"
-                android:hint="Опишите пожалуйста">
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/outlinedTextField"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:hint="Напишите название Вашего тега"-->
+<!--                android:textColorHint="#fff"-->
+<!--                android:theme="@style/TextInputLayoutAppearance"-->
+<!--                app:boxStrokeColor="#fff"-->
+<!--                app:hintTextColor="#fff"-->
+<!--                app:startIconTint="#CC1616">-->
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#fff"
-                    android:textColorHint="#fff"/>
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/TagName"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="textPersonName"-->
+<!--                    android:textColor="#fff"-->
+<!--                    android:textColorHint="#fff" />-->
 
-            </com.google.android.material.textfield.TextInputLayout>
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="#BDBDBD"
                 android:layout_marginTop="12dp"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:text="Спасибо, что помогаете улучшать приложение" />
+                android:textSize="16sp"
+                android:textColor="#fafafa"
+                android:text="Любовные романы" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupRoman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.chip.ChipGroup>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/sendButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Отправить"
-                android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
-                app:strokeWidth="1dp"
-                app:strokeColor="#fff"
+                android:text="Сохранить"
+                android:textColor="#fff"
                 app:rippleColor="#2C2C2C"
-                style="@style/Widget.MaterialComponents.Button.TextButton" />
+                app:strokeColor="#fff"
+                app:strokeWidth="1dp" />
         </LinearLayout>
     </LinearLayout>
 
